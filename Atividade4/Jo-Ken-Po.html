@@ -1,0 +1,87 @@
+<html>
+  <header>
+    <meta charset="utf-8" />
+  </header>
+  <body></body>
+</html>
+
+<script>
+  const jokenpo = {
+    Pedra: "Pedra",
+    Papel: "Papel",
+    Tesoura: "Tesoura"
+  };
+
+  var escolha;
+  alert("Bem-vindo ao jogo de Pedra, Papel ou Tesoura");
+  alert("Você jogará contra o computador");
+  alert("Basta digitar o número referente a sua jogada! Vamos começar?");
+
+  escolha = prompt("Escolha: \n1- Pedra\n2- Tesoura\n3 - Papel");
+
+  if (escolha == 1) escolha = "Pedra";
+
+  if (escolha == 2) escolha = "Tesoura";
+
+  if (escolha == 3) escolha = "Papel";
+
+  for (var i = 1; i <= 3; i++) {
+    alert(i);
+  }
+
+  var computador = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+  if (computador === 1) computador = "Pedra";
+
+  if (computador === 2) computador = "Tesoura";
+
+  if (computador === 3) computador = "Papel";
+
+  alert(jokenpo[escolha] + " VS " + jokenpo[computador]);
+
+  switch (jokenpo[escolha]) {
+    case "Pedra":
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Computador Ganha!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Tesoura) {
+        alert("Jogador Ganha!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Empate!");
+        break;
+      }
+      break;
+
+    case "Tesoura":
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Computador Ganha!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Tesoura) {
+        alert("Empate!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Jogador Ganha!");
+        break;
+      }
+      break;
+
+    case "Papel":
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Empate!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Tesoura) {
+        alert("Computador Ganha!");
+        break;
+      }
+      if (jokenpo[computador] === jokenpo.Papel) {
+        alert("Jogador Ganha!");
+        break;
+      }
+      break;
+  }
+</script>

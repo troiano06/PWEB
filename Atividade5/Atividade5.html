@@ -1,0 +1,21 @@
+<html>
+  <header>
+    <meta charset="utf-8" />
+  </header>
+  <body></body>
+</html>
+
+<script>
+  alert("Digite 3 números e receba o maior dentre eles");
+  var numero = [];
+
+  for (var i = 0; i < 3; i++) {
+    numero[i] = Number(prompt("Digite o " + (i + 1) + "º numero: "));
+  }
+
+  var retornaMaior = (numero) => {
+    alert(Math.max(...numero));
+  };
+
+  retornaMaior(numero);
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<HTML>
+    <head>
+        <script>
+            function abre(){
+                document.getElementById("janela").src = "aberta.png"
+            }
+
+            function fecha(){
+                document.getElementById("janela").src = "fechada.png"
+            }
+
+            function quebra(){
+                document.getElementById("janela").src = "quebrada.png"
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Abra a janela</h1>
+        <img src='fechada.png' id="janela" onmousemove="abre()" onmouseout="fecha()" onclick="quebra()" width="300" height="300"/>
+    </body>
+</HTML>
